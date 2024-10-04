@@ -23,16 +23,12 @@ def find_user_data(name):
 
 app = FastAPI()
 
-origins = [
-    "https://farhaan-evolv-mitacs.onrender.com",
-]
-
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
+    allow_origins=os.getenv("BASE_URL"),
     allow_methods=["*"],
     allow_credentials=True,
-    allow_headers=["*"]
+    allow_headers=["*"],
 )
 
 class LoginRequest(BaseModel):
