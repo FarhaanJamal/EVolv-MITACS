@@ -94,7 +94,7 @@ const Home = () => {
                 setLoading(false)
             } catch (err) {
                 setLoading(false)
-                toast.error("Failed to connect to the server. Or No record available")
+                console.log("Failed to connect to the server. Or No record available")
             }
         }; fetchSessionData();
     }, [dailySavingsData, monthlySavingsData])
@@ -160,7 +160,7 @@ const Home = () => {
                     setChargingStatus("noData")
                 }  
             } catch (err) {
-                toast.error("Current Status: Failed to connect to the server. Or No Record available")
+                console.log("Current Status: Failed to connect to the server. Or No Record available")
             }
         };
     
