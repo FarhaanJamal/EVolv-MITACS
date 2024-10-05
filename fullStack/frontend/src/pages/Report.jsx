@@ -23,7 +23,7 @@ const Report = () => {
                 setLoading(false)
             } catch (err) {
                 setLoading(false)
-                toast.error(err, "Failed to connect to the server. Or No record available")
+                console.log(err, "Failed to connect to the server. Or No record available")
             }
         }; fetchReport();
     }, [])
