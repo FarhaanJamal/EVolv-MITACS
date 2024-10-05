@@ -136,7 +136,7 @@ const ChargeScheduler = () => {
                     setNotes2(data[0].notes)
                 }
             } catch (err) {
-                toast.error("Current Status: Failed to connect to the server. Or No record available")
+                console.log("Current Status: Failed to connect to the server. Or No record available")
             }
         }; fetchCurrentStatus();
     }, [isPlugged, chargingStatus]);
