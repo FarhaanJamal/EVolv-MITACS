@@ -253,7 +253,7 @@ def chargeSchedulerMain(username,
     print(f"Time slot with optimization [in Minutes]: {final_time_slot_sorted} and its cost ${final_cost_sorted/100}")
     print(f"predicted charging time [in Minutes]: {time_from_pred_demand} and predicted charging distance [in Km]: {distance_from_pred_demand}")
     print(f"Total savings in this charging session: {(final_cost - final_cost_sorted)/100}")
-
+    return final_time_slot_sorted
 
 def updatePlugOutTime(username, pluginTime, plugOutTime):
     date_format = "%Y-%m-%d:%H:%M"
